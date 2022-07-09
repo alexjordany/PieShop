@@ -1,10 +1,13 @@
 ﻿using FluentValidation;
 using FluentValidation.Results;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
 using PieShop.Contracts.Persistence;
 using PieShop.Models;
 namespace PieShop.Controllers;
+
+[Authorize]
 public class OrderController : Controller
 {
     private readonly IOrderRepository _orderRepository;
