@@ -7,6 +7,7 @@ using PieShop.Persistence;
 using PieShop.Persistence.Repositories;
 using System.Text.Json.Serialization;
 using Microsoft.AspNetCore.Identity;
+using System.Globalization;
 
 var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("PieShopDbContextConnection") ?? throw new InvalidOperationException("Connection string 'PieShopDbContextConnection' not found.");
